@@ -54,6 +54,40 @@ class ViewController: UIViewController {
         label.text = String(sum)
     }
     
+    @IBAction func divide(_ sender: Any) {
+        let a = textfield1.text!
+        
+        let b = textfield2.text!
+        
+       // let sum = (Int(a) ?? 0)   + (Int(b) ?? 0)   // оператор ?? подставляет вместо nil (пустоту)   0,  можно подставить любую цифру
+        
+        guard let numberA = Int(a), let numberB = Int(b) else {
+           label.text = "Введите 2 числа"
+            
+            return
+        }
+        
+        let sum = numberA / numberB
+    
+        label.text = String(sum)
+    }
+    @IBAction func multiple(_ sender: Any) {
+        let a = textfield1.text!
+        
+        let b = textfield2.text!
+        
+       // let sum = (Int(a) ?? 0)   + (Int(b) ?? 0)   // оператор ?? подставляет вместо nil (пустоту)   0,  можно подставить любую цифру
+        
+        guard let numberA = Int(a), let numberB = Int(b) else {
+           label.text = "Введите 2 числа"
+            
+            return
+        }
+        
+        let sum = numberA * numberB
+    
+        label.text = String(sum)
+    }
     
 }
 
