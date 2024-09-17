@@ -60,8 +60,8 @@ class ViewController: UIViewController {
         let b = textfield2.text!
         
        // let sum = (Int(a) ?? 0)   + (Int(b) ?? 0)   // оператор ?? подставляет вместо nil (пустоту)   0,  можно подставить любую цифру
-        
-        guard let numberA = Int(a), let numberB = Int(b) else {
+        //double чтобы при делении было видны доли
+        guard let numberA = Double(a), let numberB = Double(b)  else {
            label.text = "Введите 2 числа"
             
             return
